@@ -1,39 +1,32 @@
 package com.example.user.neogulman;
 
-import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.ListAdapter;
-import android.widget.ListView;
-import android.widget.SimpleAdapter;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.Toast;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import android.widget.AdapterView;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.HashMap;
-import android.view.View;
-import android.widget.Toast;
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.os.Bundle;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
 
 
-public class Activity_Basket extends AppCompatActivity {
-
+public class Activity_wishlist extends AppCompatActivity {
     String myJSON;
 
     private static final String TAG_NAME = "name";
@@ -45,11 +38,11 @@ public class Activity_Basket extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_basket);
+        setContentView(R.layout.layout_wishlist);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF40A940));
-        setTitle("추가가능목록");
-        list = (ListView) findViewById(R.id.list_basket);
-        getData("http://52.78.188.234/showitem.php");
+        setTitle("위시리스트");
+        list = (ListView) findViewById(R.id.list_wishlist);
+        getData("http://52.78.188.234/showwish.php");
         NetworkUtil.setNetworkPolicy();
     }
 
@@ -68,20 +61,20 @@ public class Activity_Basket extends AppCompatActivity {
             Adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listarr);
 
             list.setAdapter(Adapter);
-           list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                   final String name = (String)parent.getItemAtPosition(position) ;
+                    final String name = (String)parent.getItemAtPosition(position) ;
 
-                   AlertDialog.Builder alert_confirm = new AlertDialog.Builder(Activity_Basket.this);
-                    alert_confirm.setMessage("위시리스트에 넣으시겠습니까?").setCancelable(false).setPositiveButton("확인",
+                    AlertDialog.Builder alert_confirm = new AlertDialog.Builder(Activity_wishlist.this);
+                    alert_confirm.setMessage("위시리스트에서 삭제하시겠습니까?").setCancelable(false).setPositiveButton("확인",
                             new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     try {
-                                        PHPRequest request = new PHPRequest("http://52.78.188.234/inputwish.php");
+                                        PHPRequest request = new PHPRequest("http://52.78.188.234/outputwish.php");
                                         request.PhPtest(name);
-                                        Toast.makeText(getApplication(),"위시리스트에 추가되었습니다",Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(getApplication(),"위시리스트에서 삭제되었습니다.",Toast.LENGTH_SHORT).show();
                                     }catch (MalformedURLException e){
                                         e.printStackTrace();
                                     }

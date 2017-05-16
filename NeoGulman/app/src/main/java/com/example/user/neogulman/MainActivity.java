@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(this, Activity_Basket.class);
             startActivity(intent);
         } else if (id == R.id.payment) {
-            Intent intent = new Intent(this, Activity_Payment.class);
+            Intent intent = new Intent(this, Activity_wishlist.class);
             startActivity(intent);
         } else if (id == R.id.tool) {
 

@@ -21,7 +21,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Activity_Basket" />
         <activity android:name=".Activity_List" />
-        <activity android:name=".Activity_Payment" />
+        <activity android:name=".Activity_wishlist" />
         <activity android:name=".Activity_path" />
         <activity android:name=".Activity_recommend"></activity>
     </application>

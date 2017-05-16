@@ -4,40 +4,41 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:id="@+id/id"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:id="@+id/name"
+        android:textSize="15sp"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
 
     <TextView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="수량 : "
         android:layout_alignParentTop="true"
-        android:layout_toEndOf="@+id/textView"
-        android:layout_marginStart="100dp" />
-
-    <TextView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:id="@+id/address"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="150dp" />
+        android:layout_marginStart="130dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/address2"
+        android:id="@+id/volume"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="200dp" />
+        android:layout_marginStart="160dp" />
 
-    <CheckBox
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/checkBox"
+        android:text="가격 : "
         android:layout_alignParentTop="true"
-        android:layout_marginStart="300dp"
-        />
+        android:layout_marginStart="230dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/price"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="270dp" />
+
+
 
 </RelativeLayout>

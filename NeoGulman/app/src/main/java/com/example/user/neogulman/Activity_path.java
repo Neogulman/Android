@@ -10,11 +10,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.net.MalformedURLException;
-
-
+import android.view.View.OnClickListener;
+//implements OnClickListener
 public class Activity_path extends AppCompatActivity {
-    private EditText data1, data2, data3;
-    private Button btn_send;
+
+    Button bt1,bt2;
 
 
     @Override
@@ -23,11 +23,16 @@ public class Activity_path extends AppCompatActivity {
         setContentView(R.layout.layout_path);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF40A940));
         setTitle("경로");
-        NetworkUtil.setNetworkPolicy();
-        data1 = (EditText)findViewById(R.id.editText);
-        data2 = (EditText)findViewById(R.id.editText2);
-        data3 = (EditText)findViewById(R.id.editText3);
-        btn_send = (Button)findViewById(R.id.btn_send);
+       // bt1= (Button)findViewById(R.id.btn);
+        //bt2= (Button)findViewById(R.id.btn2);
+        //bt1.setOnClickListener(this);
 
     }
+
+  /*  public void onClick(View v) {
+    if(v.getId()==R.id.btn){
+        bt1= (Button)findViewById(R.id.btn);
+       bt1.setBackgroundColor(0xFF40A940);
+    }
+    }*/
 }

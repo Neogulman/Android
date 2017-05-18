@@ -49,7 +49,7 @@ public class Activity_Basket extends AppCompatActivity {
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF40A940));
         setTitle("추가가능목록");
         list = (ListView) findViewById(R.id.list_basket);
-        getData("http://52.78.188.234/showitem.php");
+        getData("http://13.124.98.240/showitem.php");
         NetworkUtil.setNetworkPolicy();
     }
 
@@ -79,7 +79,7 @@ public class Activity_Basket extends AppCompatActivity {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     try {
-                                        PHPRequest request = new PHPRequest("http://52.78.188.234/inputwish.php");
+                                        PHPRequest request = new PHPRequest("http://13.124.98.240/inputwish.php");
                                         request.PhPtest(name);
                                         Toast.makeText(getApplication(),"위시리스트에 추가되었습니다",Toast.LENGTH_SHORT).show();
                                     }catch (MalformedURLException e){

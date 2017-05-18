@@ -46,7 +46,7 @@ public class Activity_List extends AppCompatActivity {
         setTitle("물품목록");
         list = (ListView) findViewById(R.id.listView);
         personList = new ArrayList<HashMap<String,String>>();
-        getData("http://52.78.188.234/showall.php");
+        getData("http://13.124.98.240/showall.php");
     }
 
 

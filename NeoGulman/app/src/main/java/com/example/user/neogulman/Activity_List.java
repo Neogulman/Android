@@ -30,7 +30,7 @@ public class Activity_List extends AppCompatActivity {
 
     private static final String result="result";
     private static final String tag_name = "name";
-    private static final String tag_volume = "volume";
+    private static final String tag_volume = "salesvolume";
     private static final String tag_price ="price";
     JSONArray peoples = null;
 

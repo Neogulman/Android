@@ -42,7 +42,7 @@ public class Activity_wishlist extends AppCompatActivity {
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF40A940));
         setTitle("위시리스트");
         list = (ListView) findViewById(R.id.list_wishlist);
-        getData("http://13.124.98.240/showwish.php");
+        getData("http://52.79.178.97/showwish.php");
         NetworkUtil.setNetworkPolicy();
     }
 
@@ -72,7 +72,7 @@ public class Activity_wishlist extends AppCompatActivity {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     try {
-                                        PHPRequest request = new PHPRequest("http://13.124.98.240/outputwish.php");
+                                        PHPRequest request = new PHPRequest("http://52.79.178.97/outputwish.php");
                                         request.PhPtest(name);
                                         Toast.makeText(getApplication(),"위시리스트에서 삭제되었습니다.",Toast.LENGTH_SHORT).show();
                                     }catch (MalformedURLException e){

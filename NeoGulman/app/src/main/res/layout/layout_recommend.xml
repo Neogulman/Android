@@ -9,4 +9,38 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.user.neogulman.Activity_recommend">
 
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/list_recommend"
+        android:choiceMode="singleChoice"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="위시리스트에 등록한 물품을 산 사람들이 함께 구매한"
+        android:id="@+id/textView14"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="물품의 목록 및 관리자가 추천하는 물품 목록입니다."
+        android:id="@+id/textView15"
+        android:layout_below="@+id/textView14"
+        android:layout_alignParentStart="true" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="─────────────────────────"
+        android:id="@+id/textView4"
+        android:layout_below="@+id/textView15"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>

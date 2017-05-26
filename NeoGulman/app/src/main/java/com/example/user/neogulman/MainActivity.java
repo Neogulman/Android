@@ -1,5 +1,6 @@
 package com.example.user.neogulman;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -57,7 +58,8 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(this, Activity_wishlist.class);
             startActivity(intent);
         } else if (id == R.id.tool) {
-
+            Intent intent = new Intent(this, Activity_paylist.class);
+            startActivity(intent);
         } else if (id == R.id.recommend) {
             Intent intent = new Intent(this, Activity_recommend.class);
             startActivity(intent);

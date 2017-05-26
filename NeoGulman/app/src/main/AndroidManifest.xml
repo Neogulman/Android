@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.user.neogulman">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/cartapp"
@@ -23,7 +25,11 @@
         <activity android:name=".Activity_List" />
         <activity android:name=".Activity_wishlist" />
         <activity android:name=".Activity_path" />
-        <activity android:name=".Activity_recommend"></activity>
+        <activity android:name=".Activity_recommend" />
+        <activity
+            android:name=".PopupActivity"
+            android:theme="@android:style/Theme.Dialog"></activity>
+        <activity android:name=".Activity_paylist"></activity>
     </application>
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
 </manifest>

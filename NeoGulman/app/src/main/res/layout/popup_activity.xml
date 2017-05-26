@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="220dip"
+    android:layout_height="150dip"
+    >
+
+    <Button
+android:id="@+id/off"
+android:layout_width="100dp"
+android:layout_height="wrap_content"
+    android:text="취소"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+<Button
+android:id="@+id/on"
+android:layout_width="100dp"
+android:layout_height="wrap_content"
+android:layout_alignParentBottom="true"
+android:layout_alignParentLeft="true"
+android:text="담기" />
+
+    <TextView
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="선택된 물품 :"
+        android:textSize="20sp"
+        android:id="@+id/textView17"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bname"
+        android:text="New Text"
+        android:textSize="20sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/off" />
+
+    <TextView
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="물품의 가격 :"
+        android:textSize="20sp"
+        android:id="@+id/textView19"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/textView17" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:textSize="20sp"
+        android:id="@+id/bprice"
+        android:layout_alignTop="@+id/textView19"
+        android:layout_alignStart="@+id/off" />
+
+</RelativeLayout>

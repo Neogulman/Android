@@ -23,28 +23,7 @@ public class Activity_Payment extends AppCompatActivity {
         setContentView(R.layout.layout_payment);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF40A940));
         setTitle("결제");
-        NetworkUtil.setNetworkPolicy();
-        data1 = (EditText)findViewById(R.id.editText);
-        data2 = (EditText)findViewById(R.id.editText2);
-        data3 = (EditText)findViewById(R.id.editText3);
-        btn_send = (Button)findViewById(R.id.btn_send);
-        btn_send.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    PHPRequest request = new PHPRequest("http://13.124.106.153/hi.php");
-                    String result = request.PhPtest(String.valueOf(data1.getText()),String.valueOf(data2.getText()),String.valueOf(data3.getText()));
-                    if(result.equals("1")){
-                        Toast.makeText(getApplication(),"들어감",Toast.LENGTH_SHORT).show();
-                    }
-                    else{
-                        Toast.makeText(getApplication(),"안 들어감",Toast.LENGTH_SHORT).show();
-                    }
-                }catch (MalformedURLException e){
-                    e.printStackTrace();
-                }
-            }
-        });
+
     }
 }
 

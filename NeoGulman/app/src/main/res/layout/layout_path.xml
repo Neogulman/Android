@@ -14,6 +14,7 @@
         android:layout_height="400dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp"
         android:id="@+id/tableLayout">
 
         <TableRow
@@ -25,8 +26,8 @@
                 android:layout_height="50dp"
                 android:layout_width="50dp"
                 android:layout_column="0"
-                android:text="하이"
                 android:id="@+id/a11"
+                android:textSize="10sp"
                 android:textColor="#FFFFFF"
                 android:background="#000000"/>
 
@@ -35,6 +36,7 @@
                 android:layout_width="50dp"
                 android:layout_column="1"
                 android:id="@+id/a12"
+                android:textSize="10sp"
                 android:background="#000000"/>
 
             <Button
@@ -42,6 +44,7 @@
                 android:layout_width="50dp"
                 android:layout_column="2"
                 android:id="@+id/a13"
+                android:textSize="10sp"
                 android:background="#000000"/>
 
             <Button
@@ -49,6 +52,7 @@
                 android:layout_width="50dp"
                 android:layout_column="3"
                 android:id="@+id/a14"
+                android:textSize="10sp"
                 android:background="#000000"/>
 
             <Button
@@ -56,6 +60,7 @@
                 android:layout_width="50dp"
                 android:layout_column="4"
                 android:id="@+id/a15"
+                android:textSize="10sp"
                 android:background="#000000"/>
 
             <Button
@@ -63,6 +68,7 @@
                 android:layout_width="50dp"
                 android:layout_column="5"
                 android:id="@+id/a16"
+                android:textSize="10sp"
                 android:background="#000000"/>
 
         </TableRow>
@@ -77,36 +83,42 @@
             android:layout_width="50dp"
             android:layout_column="0"
             android:id="@+id/a21"
+            android:textSize="10sp"
             android:text="입구"/>
 
         <Button
             android:layout_height="50dp"
             android:layout_width="50dp"
             android:id="@+id/a22"
+            android:textSize="10sp"
             android:layout_column="1" />
 
         <Button
             android:layout_height="50dp"
             android:layout_width="50dp"
             android:id="@+id/a23"
+            android:textSize="10sp"
             android:layout_column="2" />
 
         <Button
             android:layout_height="50dp"
             android:layout_width="50dp"
             android:id="@+id/a24"
+            android:textSize="10sp"
             android:layout_column="3" />
 
         <Button
             android:layout_height="50dp"
             android:layout_width="50dp"
             android:id="@+id/a25"
+            android:textSize="10sp"
             android:layout_column="4" />
 
         <Button
             android:layout_height="50dp"
             android:layout_width="50dp"
             android:id="@+id/a26"
+            android:textSize="10sp"
             android:layout_column="5" />
 
     </TableRow>
@@ -119,6 +131,7 @@
                 android:layout_height="50dp"
                 android:layout_width="50dp"
                 android:layout_column="0"
+                android:textSize="10sp"
                 android:id="@+id/a31"
                 />
             <Button
@@ -126,6 +139,7 @@
                 android:layout_width="50dp"
                 android:layout_column="1"
                 android:id="@+id/a32"
+                android:textSize="10sp"
                 android:background="#000000"/>
 
             <Button
@@ -133,12 +147,14 @@
                 android:layout_width="50dp"
                 android:layout_column="2"
                 android:id="@+id/a33"
+                android:textSize="10sp"
                 android:background="#000000"/>
 
             <Button
                 android:layout_height="50dp"
                 android:layout_width="50dp"
                 android:id="@+id/a34"
+                android:textSize="10sp"
                 android:layout_column="3" />
 
             <Button
@@ -146,6 +162,7 @@
                 android:layout_width="50dp"
                 android:layout_column="4"
                 android:id="@+id/a35"
+                android:textSize="10sp"
                 android:background="#000000"/>
 
             <Button
@@ -153,6 +170,7 @@
                 android:layout_width="50dp"
                 android:layout_column="5"
                 android:id="@+id/a36"
+                android:textSize="10sp"
                 android:background="#000000"/>
 
         </TableRow>
@@ -166,36 +184,42 @@
                 android:layout_height="50dp"
                 android:layout_width="50dp"
                 android:id="@+id/a41"
+                android:textSize="10sp"
                 android:layout_column="0" />
 
             <Button
                 android:layout_height="50dp"
                 android:layout_width="50dp"
                 android:id="@+id/a42"
+                android:textSize="10sp"
                 android:layout_column="1" />
 
             <Button
                 android:layout_height="50dp"
                 android:layout_width="50dp"
                 android:id="@+id/a43"
+                android:textSize="10sp"
                 android:layout_column="2" />
 
             <Button
                 android:layout_height="50dp"
                 android:layout_width="50dp"
                 android:id="@+id/a44"
+                android:textSize="10sp"
                 android:layout_column="3" />
 
             <Button
                 android:layout_height="50dp"
                 android:layout_width="50dp"
                 android:id="@+id/a45"
+                android:textSize="10sp"
                 android:layout_column="4" />
 
             <Button
                 android:layout_height="50dp"
                 android:layout_width="50dp"
                 android:id="@+id/a46"
+                android:textSize="10sp"
                 android:layout_column="5" />
 
         </TableRow>
@@ -209,6 +233,7 @@
                 android:layout_height="50dp"
                 android:layout_width="50dp"
                 android:id="@+id/a51"
+                android:textSize="10sp"
                 android:layout_column="0" />
 
             <Button
@@ -216,6 +241,7 @@
                 android:layout_width="50dp"
                 android:layout_column="1"
                 android:id="@+id/a52"
+                android:textSize="10sp"
                 android:background="#000000"/>
 
             <Button
@@ -223,12 +249,14 @@
                 android:layout_width="50dp"
                 android:layout_column="2"
                 android:id="@+id/a53"
+                android:textSize="10sp"
                 android:background="#000000"/>
 
             <Button
                 android:layout_height="50dp"
                 android:layout_width="50dp"
                 android:id="@+id/a54"
+                android:textSize="10sp"
                 android:layout_column="3" />
 
             <Button
@@ -236,6 +264,7 @@
                 android:layout_width="50dp"
                 android:layout_column="4"
                 android:id="@+id/a55"
+                android:textSize="10sp"
                 android:background="#000000"/>
 
             <Button
@@ -243,6 +272,7 @@
                 android:layout_width="50dp"
                 android:layout_column="5"
                 android:id="@+id/a56"
+                android:textSize="10sp"
                 android:background="#000000"/>
 
         </TableRow>
@@ -256,6 +286,7 @@
                 android:layout_height="50dp"
                 android:layout_width="50dp"
                 android:id="@+id/a61"
+                android:textSize="10sp"
                 android:layout_column="0" />
 
             <Button
@@ -263,6 +294,7 @@
                 android:layout_width="50dp"
                 android:layout_column="1"
                 android:id="@+id/a62"
+                android:textSize="10sp"
                 android:background="#000000"/>
 
             <Button
@@ -270,12 +302,14 @@
                 android:layout_width="50dp"
                 android:layout_column="2"
                 android:id="@+id/a63"
+                android:textSize="10sp"
                 android:background="#000000"/>
 
             <Button
                 android:layout_height="50dp"
                 android:layout_width="50dp"
                 android:id="@+id/a64"
+                android:textSize="10sp"
                 android:layout_column="3" />
 
             <Button
@@ -283,6 +317,7 @@
                 android:layout_width="50dp"
                 android:layout_column="4"
                 android:id="@+id/a65"
+                android:textSize="10sp"
                 android:background="#000000"/>
 
             <Button
@@ -290,6 +325,7 @@
                 android:layout_width="50dp"
                 android:layout_column="5"
                 android:id="@+id/a66"
+                android:textSize="10sp"
                 android:background="#000000"/>
 
         </TableRow>
@@ -303,30 +339,35 @@
                 android:layout_height="50dp"
                 android:layout_width="50dp"
                 android:id="@+id/a71"
+                android:textSize="10sp"
                 android:layout_column="0" />
 
             <Button
                 android:layout_height="50dp"
                 android:layout_width="50dp"
                 android:id="@+id/a72"
+                android:textSize="10sp"
                 android:layout_column="1" />
 
             <Button
                 android:layout_height="50dp"
                 android:layout_width="50dp"
                 android:id="@+id/a73"
+                android:textSize="10sp"
                 android:layout_column="2" />
 
             <Button
                 android:layout_height="50dp"
                 android:layout_width="50dp"
                 android:id="@+id/a74"
+                android:textSize="10sp"
                 android:layout_column="3" />
 
             <Button
                 android:layout_height="50dp"
                 android:layout_width="50dp"
                 android:id="@+id/a75"
+                android:textSize="10sp"
                 android:layout_column="4" />
 
             <Button
@@ -334,6 +375,7 @@
                 android:layout_width="50dp"
                 android:layout_column="5"
                 android:id="@+id/a76"
+                android:textSize="10sp"
                 android:text="출구"/>
 
         </TableRow>
@@ -349,6 +391,7 @@
                 android:layout_width="50dp"
                 android:layout_column="0"
                 android:id="@+id/a81"
+                android:textSize="10sp"
                 android:background="#000000"/>
 
             <Button
@@ -356,6 +399,7 @@
                 android:layout_width="50dp"
                 android:layout_column="1"
                 android:id="@+id/a82"
+                android:textSize="10sp"
                 android:background="#000000"/>
 
             <Button
@@ -363,6 +407,7 @@
                 android:layout_width="50dp"
                 android:layout_column="2"
                 android:id="@+id/a83"
+                android:textSize="10sp"
                 android:background="#000000"/>
 
             <Button
@@ -370,6 +415,7 @@
                 android:layout_width="50dp"
                 android:layout_column="3"
                 android:id="@+id/a84"
+                android:textSize="10sp"
                 android:background="#000000"/>
 
             <Button
@@ -377,6 +423,7 @@
                 android:layout_width="50dp"
                 android:layout_column="4"
                 android:id="@+id/a85"
+                android:textSize="10sp"
                 android:background="#000000"/>
 
             <Button
@@ -384,6 +431,7 @@
                 android:layout_width="50dp"
                 android:layout_column="5"
                 android:id="@+id/a86"
+                android:textSize="10sp"
                 android:background="#000000"/>
 
 
@@ -406,21 +454,23 @@
     </TableLayout>
 
     <Button
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
+        android:layout_width="110dp"
+        android:layout_height="60dp"
         android:text="경로갱신"
         android:id="@+id/show"
+        android:background="@drawable/button"
         android:layout_alignParentBottom="true"
         android:layout_alignEnd="@+id/tableLayout"
-        android:layout_marginEnd="56dp" />
+        android:layout_marginEnd="40dp" />
 
     <Button
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
+        android:layout_width="110dp"
+        android:layout_height="60dp"
         android:text="물품정보확인"
         android:id="@+id/button1"
-        android:layout_marginStart="51dp"
+        android:background="@drawable/button"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="44dp" />
 
 </RelativeLayout>

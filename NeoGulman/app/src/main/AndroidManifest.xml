@@ -28,8 +28,8 @@
         <activity android:name=".Activity_recommend" />
         <activity
             android:name=".PopupActivity"
-            android:theme="@android:style/Theme.Dialog"></activity>
-        <activity android:name=".Activity_paylist"></activity>
+            android:theme="@android:style/Theme.Dialog" />
+        <activity android:name=".Activity_paylist" />
     </application>
 
 </manifest>

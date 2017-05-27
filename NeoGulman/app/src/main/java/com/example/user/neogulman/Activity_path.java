@@ -20,7 +20,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
-
+import android.os.SystemClock;
 import android.view.View.OnClickListener;
 import android.content.Intent;
 import org.json.JSONArray;
@@ -34,6 +34,7 @@ public class Activity_path extends AppCompatActivity implements OnClickListener 
 
     String myJSON;
     private static final String result="result";
+    private static final String name="name";
     private static final String tag_x = "locationX";
     private static final String tag_y = "locationY";
     JSONArray peoples = null;
@@ -48,6 +49,7 @@ public class Activity_path extends AppCompatActivity implements OnClickListener 
     Button a81, a82, a83, a84, a85, a86;
     Button show;
     Button pop;
+    Button namebtn;
     int[][]arr = new int[8][10];
     int i,j,k,n=0; //n 상품개수
     int[] locationX = new int[100];
@@ -73,11 +75,13 @@ public class Activity_path extends AppCompatActivity implements OnClickListener 
         pop = (Button) findViewById(R.id.button1);
         //bt2= (Button)findViewById(R.id.btn2);
         pop.setOnClickListener(this);
+
     }
 
     public void onClick(View v) {
         switch(v.getId()) {
             case R.id.show:
+
                 a11 = (Button) findViewById(R.id.a11);
                 a12 = (Button) findViewById(R.id.a12);
                 a13 = (Button) findViewById(R.id.a13);
@@ -130,6 +134,7 @@ public class Activity_path extends AppCompatActivity implements OnClickListener 
                 if (v.getId() == R.id.show) {
                     if (arr[1][1] == 3) {
                         a11.setBackgroundColor(0xFFFF7493);
+                        SystemClock.sleep(1000);
                     }
                     if (arr[2][1] == 3) {
                         a12.setBackgroundColor(0xFFFF7493);
@@ -147,25 +152,25 @@ public class Activity_path extends AppCompatActivity implements OnClickListener 
                         a16.setBackgroundColor(0xFFFF7493);
                     }
                     if (arr[1][2] == 1 || arr[1][2] == 4) {
-                        a21.setBackgroundColor(0xFF40A940);
+                        a21.setBackgroundColor(0xFF3399FF);
                     }
                     if (arr[2][2] == 1 || arr[2][2] == 4) {
-                        a22.setBackgroundColor(0xFF40A940);
+                        a22.setBackgroundColor(0xFF3399FF);
                     }
                     if (arr[3][2] == 1 || arr[3][2] == 4) {
-                        a23.setBackgroundColor(0xFF40A940);
+                        a23.setBackgroundColor(0xFF3399FF);
                     }
                     if (arr[4][2] == 1 || arr[4][2] == 4) {
-                        a24.setBackgroundColor(0xFF40A940);
+                        a24.setBackgroundColor(0xFF3399FF);
                     }
                     if (arr[5][2] == 1 || arr[5][2] == 4) {
-                        a25.setBackgroundColor(0xFF40A940);
+                        a25.setBackgroundColor(0xFF3399FF);
                     }
                     if (arr[6][2] == 1 || arr[6][2] == 4) {
-                        a26.setBackgroundColor(0xFF40A940);
+                        a26.setBackgroundColor(0xFF3399FF);
                     }
                     if (arr[1][3] == 1 || arr[1][3] == 4) {
-                        a31.setBackgroundColor(0xFF40A940);
+                        a31.setBackgroundColor(0xFF3399FF);
                     }
                     if (arr[2][3] == 3) {
                         a32.setBackgroundColor(0xFFFF7493);
@@ -174,7 +179,7 @@ public class Activity_path extends AppCompatActivity implements OnClickListener 
                         a33.setBackgroundColor(0xFFFF7493);
                     }
                     if (arr[4][3] == 1 || arr[4][3] == 4) {
-                        a34.setBackgroundColor(0xFF40A940);
+                        a34.setBackgroundColor(0xFF3399FF);
                     }
                     if (arr[5][3] == 3) {
                         a35.setBackgroundColor(0xFFFF7493);
@@ -183,25 +188,25 @@ public class Activity_path extends AppCompatActivity implements OnClickListener 
                         a36.setBackgroundColor(0xFFFF7493);
                     }
                     if (arr[1][4] == 1 || arr[1][4] == 4) {
-                        a41.setBackgroundColor(0xFF40A940);
+                        a41.setBackgroundColor(0xFF3399FF);
                     }
                     if (arr[2][4] == 1 || arr[2][4] == 4) {
-                        a42.setBackgroundColor(0xFF40A940);
+                        a42.setBackgroundColor(0xFF3399FF);
                     }
                     if (arr[3][4] == 1 || arr[3][4] == 4) {
-                        a43.setBackgroundColor(0xFF40A940);
+                        a43.setBackgroundColor(0xFF3399FF);
                     }
                     if (arr[4][4] == 1 || arr[4][4] == 4) {
-                        a44.setBackgroundColor(0xFF40A940);
+                        a44.setBackgroundColor(0xFF3399FF);
                     }
                     if (arr[5][4] == 1 || arr[5][4] == 4) {
-                        a45.setBackgroundColor(0xFF40A940);
+                        a45.setBackgroundColor(0xFF3399FF);
                     }
                     if (arr[6][4] == 1 || arr[6][4] == 4) {
-                        a46.setBackgroundColor(0xFF40A940);
+                        a46.setBackgroundColor(0xFF3399FF);
                     }
                     if (arr[1][5] == 1) {
-                        a51.setBackgroundColor(0xFF40A940);
+                        a51.setBackgroundColor(0xFF3399FF);
                     }
                     if (arr[2][5] == 3) {
                         a52.setBackgroundColor(0xFFFF7493);
@@ -210,7 +215,7 @@ public class Activity_path extends AppCompatActivity implements OnClickListener 
                         a53.setBackgroundColor(0xFFFF7493);
                     }
                     if (arr[4][5] == 1 || arr[4][5] == 4) {
-                        a54.setBackgroundColor(0xFF40A940);
+                        a54.setBackgroundColor(0xFF3399FF);
                     }
                     if (arr[5][5] == 3) {
                         a55.setBackgroundColor(0xFFFF7493);
@@ -219,7 +224,7 @@ public class Activity_path extends AppCompatActivity implements OnClickListener 
                         a56.setBackgroundColor(0xFFFF7493);
                     }
                     if (arr[1][6] == 1 || arr[1][6] == 4) {
-                        a61.setBackgroundColor(0xFF40A940);
+                        a61.setBackgroundColor(0xFF3399FF);
                     }
                     if (arr[2][6] == 3) {
                         a62.setBackgroundColor(0xFFFF7493);
@@ -228,31 +233,31 @@ public class Activity_path extends AppCompatActivity implements OnClickListener 
                         a63.setBackgroundColor(0xFFFF7493);
                     }
                     if (arr[4][6] == 1 || arr[4][6] == 4) {
-                        a64.setBackgroundColor(0xFF40A940);
+                        a64.setBackgroundColor(0xFF3399FF);
                     }
                     if (arr[5][6] == 3) {
-                        a65.setBackgroundColor(0xFFFF7493);
+                        a65.setBackgroundColor(0xFF3399FF);
                     }
                     if (arr[6][6] == 3) {
                         a66.setBackgroundColor(0xFFFF7493);
                     }
                     if (arr[1][7] == 1 || arr[1][7] == 4) {
-                        a71.setBackgroundColor(0xFF40A940);
+                        a71.setBackgroundColor(0xFF3399FF);
                     }
                     if (arr[2][7] == 1 || arr[2][7] == 4) {
-                        a72.setBackgroundColor(0xFF40A940);
+                        a72.setBackgroundColor(0xFF3399FF);
                     }
                     if (arr[3][7] == 1 || arr[3][7] == 4) {
-                        a73.setBackgroundColor(0xFF40A940);
+                        a73.setBackgroundColor(0xFF3399FF);
                     }
                     if (arr[4][7] == 1 || arr[4][7] == 4) {
-                        a74.setBackgroundColor(0xFF40A940);
+                        a74.setBackgroundColor(0xFF3399FF);
                     }
                     if (arr[5][7] == 1 || arr[5][7] == 4) {
-                        a75.setBackgroundColor(0xFF40A940);
+                        a75.setBackgroundColor(0xFF3399FF);
                     }
                     if (arr[6][7] == 1 || arr[6][7] == 4) {
-                        a76.setBackgroundColor(0xFF40A940);
+                        a76.setBackgroundColor(0xFF3399FF);
                     }
                     if (arr[1][8] == 3) {
                         a81.setBackgroundColor(0xFFFF7493);
@@ -289,10 +294,16 @@ public class Activity_path extends AppCompatActivity implements OnClickListener 
 
             for (int num = 0; num < peoples.length(); num++) {
                 JSONObject c = peoples.getJSONObject(num);
+                String nametemp = c.getString(name);
                 String first = c.getString(tag_x);
                 String second = c.getString(tag_y);
                 int x = Integer.parseInt(first);
                 int y = Integer.parseInt(second);
+
+                String temp = "a"+x+y;
+                int temp2 = getResources().getIdentifier(temp,"id",getPackageName());
+                namebtn = (Button)findViewById(temp2);
+                namebtn.setText(nametemp);
             }
 
 

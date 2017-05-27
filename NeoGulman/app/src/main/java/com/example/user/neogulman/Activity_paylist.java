@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -25,26 +26,48 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
+import android.view.View.OnClickListener;
 
-public class Activity_paylist extends AppCompatActivity {
+public class Activity_paylist extends AppCompatActivity implements OnClickListener{
 
     String myJSON;
 
     private static final String TAG_NAME = "name";
+    private static final String TAG_PRICE = "price";
     private static final String TAG_RESULTS="result";
     JSONArray peoples = null;
     ArrayList<String> listarr = new ArrayList<String>();
     ListView list;
+    String result;
+    Button back;
+    Button pay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_paylist);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF40A940));
-        setTitle("위시리스트");
+        setTitle("장바구니");
         list = (ListView) findViewById(R.id.list_paylist);
-        getData("http://52.79.178.97/showwish.php");
+        getData("http://52.79.178.97/showpaylist.php");
         NetworkUtil.setNetworkPolicy();
+
+
+        back = (Button) findViewById(R.id.back);
+        //bt2= (Button)findViewById(R.id.btn2);
+        back.setOnClickListener(this);
+
+        pay = (Button) findViewById(R.id.back);
+        //bt2= (Button)findViewById(R.id.btn2);
+        pay.setOnClickListener(this);
+    }
+
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.back:
+                finish();
+                break;
+        }
     }
 
     protected void showList(){
@@ -55,8 +78,10 @@ public class Activity_paylist extends AppCompatActivity {
             for(int i=0;i<peoples.length();i++){
                 JSONObject c = peoples.getJSONObject(i);
                 String name = c.getString(TAG_NAME);
-                String name2 = name + " " + name;
-                listarr.add(name2);
+                String price = c.getString(TAG_PRICE);
+                String res = "품명 :   " + name + "                             " + "가격 : " + price;
+                listarr.add(res);
+                result = name;
             }
 
             ArrayAdapter<String> Adapter;
@@ -66,17 +91,16 @@ public class Activity_paylist extends AppCompatActivity {
             list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    final String name = (String)parent.getItemAtPosition(position) ;
 
                     AlertDialog.Builder alert_confirm = new AlertDialog.Builder(Activity_paylist.this);
-                    alert_confirm.setMessage("위시리스트에서 삭제하시겠습니까?").setCancelable(false).setPositiveButton("확인",
+                    alert_confirm.setMessage("장바구니에서 삭제하시겠습니까?").setCancelable(false).setPositiveButton("확인",
                             new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     try {
-                                        PHPRequest request = new PHPRequest("http://52.79.178.97/outputwish.php");
-                                        request.PhPtest(name);
-                                        Toast.makeText(getApplication(),"위시리스트에서 삭제되었습니다.",Toast.LENGTH_SHORT).show();
+                                        PHPRequest request = new PHPRequest("http://52.79.178.97/outputpaylist.php");
+                                        request.PhPtest(result);
+                                        Toast.makeText(getApplication(),"장바구니에서 삭제되었습니다.",Toast.LENGTH_SHORT).show();
                                     }catch (MalformedURLException e){
                                         e.printStackTrace();
                                     }

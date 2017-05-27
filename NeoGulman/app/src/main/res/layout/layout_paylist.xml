@@ -27,10 +27,9 @@
         android:layout_alignParentStart="true" />
     <ListView
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="300dp"
         android:id="@+id/list_paylist"
         android:choiceMode="singleChoice"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView4" />
 
@@ -41,5 +40,24 @@
         android:id="@+id/textView4"
         android:layout_below="@+id/textView3"
         android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="110dp"
+        android:layout_height="60dp"
+        android:text="뒤로가기"
+        android:id="@+id/back"
+        android:background="@drawable/button"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="30dp" />
+
+    <Button
+        android:layout_width="110dp"
+        android:layout_height="60dp"
+        android:text="결제하기"
+        android:id="@+id/pay"
+        android:background="@drawable/button"
+        android:layout_marginRight="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/list_paylist" />
 
 </RelativeLayout>

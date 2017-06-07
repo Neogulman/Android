@@ -39,7 +39,6 @@ public class Activity_path extends AppCompatActivity implements OnClickListener 
     private static final String tag_y = "locationY";
     JSONArray peoples = null;
 
-    int tempp=2;
     static int[][] f= new int[6][8];
     static int[][] s= new int[6][8];
     static int[][] res= new int[6][8];
@@ -76,15 +75,13 @@ public class Activity_path extends AppCompatActivity implements OnClickListener 
         setContentView(R.layout.layout_path);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF40A940));
         setTitle("경로");
-        getData("http://52.79.178.97/getaxis.php");
+        getData("http://52.78.55.44/getaxis.php");
 
 
         show = (Button) findViewById(R.id.show);
-        //bt2= (Button)findViewById(R.id.btn2);
         show.setOnClickListener(this);
 
         pop = (Button) findViewById(R.id.button1);
-        //bt2= (Button)findViewById(R.id.btn2);
         pop.setOnClickListener(this);
 
     }
@@ -250,10 +247,7 @@ public class Activity_path extends AppCompatActivity implements OnClickListener 
                 ccnt++;
                 break;
             default:
-
                 Intent intent= new Intent(this, PopupActivity.class);
-                intent.putExtra("variable", tempp);
-                tempp++;
                 startActivity(intent);
                 break;
         }

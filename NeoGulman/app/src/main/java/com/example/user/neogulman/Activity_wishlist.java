@@ -45,7 +45,7 @@ public class Activity_wishlist extends AppCompatActivity implements OnClickListe
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF40A940));
         setTitle("위시리스트");
         list = (ListView) findViewById(R.id.list_wishlist);
-        getData("http://52.79.178.97/showwish.php");
+        getData("http://52.78.55.44/showwish.php");
         NetworkUtil.setNetworkPolicy();
 
         listback3 = (Button)findViewById(R.id.listback3);
@@ -63,11 +63,12 @@ public class Activity_wishlist extends AppCompatActivity implements OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.listback3:
-                finish();
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
                 break;
             case R.id.listpath:
-                Intent intent = new Intent(this, Activity_path.class);
-                startActivity(intent);
+                Intent intent2 = new Intent(this, Activity_path.class);
+                startActivity(intent2);
                 break;
         }
     }
@@ -98,10 +99,10 @@ public class Activity_wishlist extends AppCompatActivity implements OnClickListe
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     try {
-                                        PHPRequest request = new PHPRequest("http://52.79.178.97/outputwish.php");
+                                        PHPRequest request = new PHPRequest("http://52.78.55.44/outputwish.php");
                                         request.PhPtest(name);
                                         Toast.makeText(getApplication(),"위시리스트에서 삭제되었습니다.",Toast.LENGTH_SHORT).show();
-                                        Intent intent = new Intent(Activity_wishlist.this, Activity_wishlist.class);
+                                       Intent intent = new Intent(Activity_wishlist.this, Activity_wishlist.class);
                                         startActivity(intent);
                                     }catch (MalformedURLException e){
                                         e.printStackTrace();

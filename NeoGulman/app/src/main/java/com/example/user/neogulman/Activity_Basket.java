@@ -52,7 +52,7 @@ public class Activity_Basket extends AppCompatActivity  implements OnClickListen
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF40A940));
         setTitle("추가가능목록");
         list = (ListView) findViewById(R.id.list_basket);
-        getData("http://52.79.178.97/showitem.php");
+        getData("http://52.78.55.44/showitem.php");
         NetworkUtil.setNetworkPolicy();
 
         listback2 = (Button)findViewById(R.id.listback2);
@@ -64,11 +64,12 @@ public class Activity_Basket extends AppCompatActivity  implements OnClickListen
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.listback2:
-                finish();
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
                 break;
             case R.id.listwish:
-                Intent intent = new Intent(this, Activity_wishlist.class);
-                startActivity(intent);
+                Intent intent2 = new Intent(this, Activity_wishlist.class);
+                startActivity(intent2);
                 break;
         }
     }
@@ -105,7 +106,7 @@ public class Activity_Basket extends AppCompatActivity  implements OnClickListen
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     try {
-                                        PHPRequest request = new PHPRequest("http://52.79.178.97/inputwish.php");
+                                        PHPRequest request = new PHPRequest("http://52.78.55.44/inputwish.php");
                                         request.PhPtest(name);
                                         Toast.makeText(getApplication(),"위시리스트에 추가되었습니다",Toast.LENGTH_SHORT).show();
                                     }catch (MalformedURLException e){

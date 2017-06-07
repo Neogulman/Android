@@ -41,67 +41,68 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="[사이드메뉴] -> [물품 보기] : 마트 내 전체 물품 보기 가능"
+        android:text="[물품 보기] : 마트 내 전체 물품 보기 가능"
         android:id="@+id/textView6"
         android:layout_below="@+id/textView8"
         android:layout_alignParentStart="true"
         android:layout_marginTop="20dp"
+        android:textSize="16sp"
         android:textColor="#000000"
-        android:textStyle="bold"
 />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="[사이드메뉴] -> [물품 추가] : 위시리스트에 추가 가능"
+        android:text="[물품 추가] : 위시리스트에 추가 가능"
+        android:textSize="16sp"
+        android:textColor="#000000"
         android:id="@+id/textView9"
         android:layout_below="@+id/textView6"
         android:layout_alignParentStart="true"
         android:layout_marginTop="20dp"
-        android:textColor="#000000"
-        android:textStyle="bold"/>
+    />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="[사이드메뉴] -> [위시리스트] : 보기 및 삭제 가능 "
+        android:text="[위시리스트] : 보기 및 삭제 가능 "
         android:id="@+id/textView10"
         android:layout_below="@+id/textView9"
         android:layout_alignParentStart="true"
         android:layout_marginTop="20dp"
-        android:textColor="#000000"
-        android:textStyle="bold" />
+        android:textSize="16sp"
+        android:textColor="#000000" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="[사이드메뉴] -> [장바구니] : 장바구니 및 결제 가능"
+        android:text="[장바구니] : 장바구니 및 결제 가능"
         android:id="@+id/textView11"
         android:layout_below="@+id/textView10"
         android:layout_alignParentStart="true"
         android:layout_marginTop="20dp"
-        android:textColor="#000000"
-        android:textStyle="bold" />
+        android:textSize="16sp"
+        android:textColor="#000000" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="[사이드메뉴] -> [추천] : 판매데이터를 기반으로 물품 추천"
+        android:text="[추천] : 판매데이터를 기반으로 물품 추천"
         android:id="@+id/textView12"
         android:layout_below="@+id/textView11"
         android:layout_alignParentStart="true"
         android:layout_marginTop="20dp"
-        android:textColor="#000000"
-        android:textStyle="bold"/>
+        android:textSize="16sp"
+        android:textColor="#000000"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="[사이드메뉴] -> [경로] : 위시리스트 품목의 최단 경로 출력"
+        android:text="[경로] : 위시리스트 품목의 최단 경로 출력"
         android:id="@+id/textView13"
         android:layout_below="@+id/textView12"
         android:layout_alignParentStart="true"
         android:layout_marginTop="20dp"
-        android:textColor="#000000"
-        android:textStyle="bold"/>
+        android:textSize="16sp"
+        android:textColor="#000000"/>
 
 </RelativeLayout>

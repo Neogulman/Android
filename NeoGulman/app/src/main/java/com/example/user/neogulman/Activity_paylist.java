@@ -15,7 +15,6 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -50,7 +49,7 @@ public class Activity_paylist extends AppCompatActivity implements OnClickListen
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF40A940));
         setTitle("장바구니");
         list = (ListView) findViewById(R.id.list_paylist);
-        getData("http://52.79.178.97/showpaylist.php");
+        getData("http://52.78.55.44/showpaylist.php");
         NetworkUtil.setNetworkPolicy();
 
 
@@ -58,7 +57,7 @@ public class Activity_paylist extends AppCompatActivity implements OnClickListen
         //bt2= (Button)findViewById(R.id.btn2);
         back.setOnClickListener(this);
 
-        pay = (Button) findViewById(R.id.back);
+        pay = (Button) findViewById(R.id.pay);
         //bt2= (Button)findViewById(R.id.btn2);
         pay.setOnClickListener(this);
     }
@@ -66,9 +65,19 @@ public class Activity_paylist extends AppCompatActivity implements OnClickListen
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.back:
-                finish();
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
                 break;
+            case R.id.pay :
+                Intent intent2= new Intent(this, KakaoActivity.class);
+                startActivity(intent2);
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 
     protected void showList(){
@@ -99,7 +108,7 @@ public class Activity_paylist extends AppCompatActivity implements OnClickListen
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     try {
-                                        PHPRequest request = new PHPRequest("http://52.79.178.97/outputpaylist.php");
+                                        PHPRequest request = new PHPRequest("http://52.78.55.44/outputpaylist.php");
                                         request.PhPtest(result);
                                         Toast.makeText(getApplication(),"장바구니에서 삭제되었습니다.",Toast.LENGTH_SHORT).show();
                                         Intent intent = new Intent(Activity_paylist.this, Activity_paylist.class);

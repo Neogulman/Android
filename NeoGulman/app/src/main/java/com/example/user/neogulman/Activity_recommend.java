@@ -40,7 +40,7 @@ public class Activity_recommend extends AppCompatActivity {
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF40A940));
         setTitle("추천");
         list = (ListView) findViewById(R.id.list_recommend);
-        getData("http://52.79.178.97/showrec.php");
+        getData("http://52.78.55.44/showrec.php");
         NetworkUtil.setNetworkPolicy();
     }
 
@@ -70,7 +70,7 @@ public class Activity_recommend extends AppCompatActivity {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     try {
-                                        PHPRequest request = new PHPRequest("http://13.124.98.240/inputwish.php");
+                                        PHPRequest request = new PHPRequest("http://52.78.55.44/inputwish.php");
                                         request.PhPtest(name);
                                         Toast.makeText(getApplication(),"위시리스트에 추가되었습니다",Toast.LENGTH_SHORT).show();
                                     }catch (MalformedURLException e){

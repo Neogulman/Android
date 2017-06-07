@@ -51,7 +51,7 @@ public class Activity_List extends AppCompatActivity implements OnClickListener{
         setTitle("물품목록");
         list = (ListView) findViewById(R.id.listView);
         personList = new ArrayList<HashMap<String,String>>();
-        getData("http://52.79.178.97/showall.php");
+        getData("http://52.78.55.44/showall.php");
 
         listback = (Button)findViewById(R.id.listback);
         listadd = (Button)findViewById(R.id.listadd);
@@ -62,11 +62,12 @@ public class Activity_List extends AppCompatActivity implements OnClickListener{
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.listback:
-                finish();
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
                 break;
             case R.id.listadd:
-                Intent intent = new Intent(this, Activity_Basket.class);
-                startActivity(intent);
+                Intent intent2 = new Intent(this, Activity_Basket.class);
+                startActivity(intent2);
                 break;
         }
     }

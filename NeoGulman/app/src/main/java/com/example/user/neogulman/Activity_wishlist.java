@@ -2,6 +2,7 @@ package com.example.user.neogulman;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
@@ -24,9 +25,9 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import android.view.View.OnClickListener;
 
-
-public class Activity_wishlist extends AppCompatActivity {
+public class Activity_wishlist extends AppCompatActivity implements OnClickListener{
     String myJSON;
 
     private static final String TAG_NAME = "name";
@@ -34,6 +35,8 @@ public class Activity_wishlist extends AppCompatActivity {
     JSONArray peoples = null;
     ArrayList<String> listarr = new ArrayList<String>();
     ListView list;
+    Button listback3;
+    Button listpath;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +47,29 @@ public class Activity_wishlist extends AppCompatActivity {
         list = (ListView) findViewById(R.id.list_wishlist);
         getData("http://52.79.178.97/showwish.php");
         NetworkUtil.setNetworkPolicy();
+
+        listback3 = (Button)findViewById(R.id.listback3);
+        listpath = (Button)findViewById(R.id.listpath);
+        listback3.setOnClickListener(this);
+        listpath.setOnClickListener(this);
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.listback3:
+                finish();
+                break;
+            case R.id.listpath:
+                Intent intent = new Intent(this, Activity_path.class);
+                startActivity(intent);
+                break;
+        }
     }
 
     protected void showList(){
@@ -75,6 +101,8 @@ public class Activity_wishlist extends AppCompatActivity {
                                         PHPRequest request = new PHPRequest("http://52.79.178.97/outputwish.php");
                                         request.PhPtest(name);
                                         Toast.makeText(getApplication(),"위시리스트에서 삭제되었습니다.",Toast.LENGTH_SHORT).show();
+                                        Intent intent = new Intent(Activity_wishlist.this, Activity_wishlist.class);
+                                        startActivity(intent);
                                     }catch (MalformedURLException e){
                                         e.printStackTrace();
                                     }

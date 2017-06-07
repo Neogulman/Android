@@ -40,7 +40,7 @@ public class Activity_recommend extends AppCompatActivity {
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF40A940));
         setTitle("추천");
         list = (ListView) findViewById(R.id.list_recommend);
-        getData("http://13.124.98.240/showrec.php");
+        getData("http://52.79.178.97/showrec.php");
         NetworkUtil.setNetworkPolicy();
     }
 

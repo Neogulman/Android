@@ -29,9 +29,9 @@
         android:layout_height="400dp"
         android:id="@+id/list_basket"
         android:choiceMode="singleChoice"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView4" />
+        android:layout_below="@+id/textView4"
+        android:layout_above="@+id/listadd" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -41,5 +41,24 @@
         android:layout_below="@+id/textView3"
         android:layout_alignParentStart="true" />
 
+    <Button
+        android:layout_width="110dp"
+        android:layout_height="60dp"
+        android:text="뒤로가기"
+        android:id="@+id/listback2"
+        android:background="@drawable/button"
+        android:layout_marginLeft="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="110dp"
+        android:layout_height="60dp"
+        android:text="위시리스트"
+        android:id="@+id/listwish"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/button"
+        android:layout_alignEnd="@+id/list_basket"
+        android:layout_alignTop="@+id/listback2" />
 
 </RelativeLayout>

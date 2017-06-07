@@ -13,7 +13,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import android.content.Intent;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -36,6 +36,7 @@ public class PopupActivity extends Activity  implements OnClickListener {
     TextView bprice;
     Button on;
     Button off;
+    int shut=2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,17 +53,37 @@ public class PopupActivity extends Activity  implements OnClickListener {
         //bt2= (Button)findViewById(R.id.btn2);
         off.setOnClickListener(this);
 
+        // Intent get
+        Intent intent = new Intent(this.getIntent());
+        int res  = intent.getIntExtra("variable", 1);
+        bname =(TextView)findViewById(R.id.bname);
+        bprice = (TextView)findViewById(R.id.bprice);
+        if(res == 2){
+            bname.setText("Knife");
+            bprice.setText("1200");
+        }
+        else if(res == 3){
+            bname.setText("Cable");
+            bprice.setText("5500");
+        }
+        else if(res == 4){
+            bname.setText("doll");
+            bprice.setText("14000");
+        }
     }
 
     public void onClick(View v) {
-        bname =(TextView)findViewById(R.id.bname);
+
+
         switch (v.getId()) {
             case R.id.off: finish(); break;
             default :
+
                 try {
                     PHPRequest request = new PHPRequest("http://52.79.178.97/inputbasket.php");
                     request.PhPtest(bname.getText().toString());
                     Toast.makeText(getApplication(),"장바구니에 추가되었습니다",Toast.LENGTH_SHORT).show();
+
                     finish();
                 }catch (MalformedURLException e){
                     e.printStackTrace();
@@ -77,7 +98,7 @@ public class PopupActivity extends Activity  implements OnClickListener {
         try {
             JSONObject jsonObj = new JSONObject(myJSON);
             peoples = jsonObj.getJSONArray(TAG_RESULTS);
-
+/*
             for(int i=0;i<peoples.length();i++){
                 JSONObject c = peoples.getJSONObject(i);
                 String name = c.getString(TAG_NAME);
@@ -85,6 +106,7 @@ public class PopupActivity extends Activity  implements OnClickListener {
                 bname.setText(name);
                 bprice.setText(price);
             }
+*/
 
         }catch (JSONException e) {
             e.printStackTrace();

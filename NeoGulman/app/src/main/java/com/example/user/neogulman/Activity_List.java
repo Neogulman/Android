@@ -2,6 +2,7 @@ package com.example.user.neogulman;
 
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -23,8 +24,10 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
+import android.widget.Button;
+import android.view.View.OnClickListener;
 
-public class Activity_List extends AppCompatActivity {
+public class Activity_List extends AppCompatActivity implements OnClickListener{
 
     String myJSON;
 
@@ -33,6 +36,8 @@ public class Activity_List extends AppCompatActivity {
     private static final String tag_volume = "salesvolume";
     private static final String tag_price ="price";
     JSONArray peoples = null;
+    Button listback;
+    Button listadd;
 
     ArrayList<HashMap<String, String>> personList;
 
@@ -47,8 +52,30 @@ public class Activity_List extends AppCompatActivity {
         list = (ListView) findViewById(R.id.listView);
         personList = new ArrayList<HashMap<String,String>>();
         getData("http://52.79.178.97/showall.php");
+
+        listback = (Button)findViewById(R.id.listback);
+        listadd = (Button)findViewById(R.id.listadd);
+        listback.setOnClickListener(this);
+        listadd.setOnClickListener(this);
     }
 
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.listback:
+                finish();
+                break;
+            case R.id.listadd:
+                Intent intent = new Intent(this, Activity_Basket.class);
+                startActivity(intent);
+                break;
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
 
     protected void showList(){
         try {

@@ -2,6 +2,7 @@ package com.example.user.neogulman;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
@@ -79,7 +80,7 @@ public class Activity_paylist extends AppCompatActivity implements OnClickListen
                 JSONObject c = peoples.getJSONObject(i);
                 String name = c.getString(TAG_NAME);
                 String price = c.getString(TAG_PRICE);
-                String res = "품명 :   " + name + "                             " + "가격 : " + price;
+                String res = "품명 :   " + name + "                      " + "가격 : " + price;
                 listarr.add(res);
                 result = name;
             }
@@ -101,6 +102,8 @@ public class Activity_paylist extends AppCompatActivity implements OnClickListen
                                         PHPRequest request = new PHPRequest("http://52.79.178.97/outputpaylist.php");
                                         request.PhPtest(result);
                                         Toast.makeText(getApplication(),"장바구니에서 삭제되었습니다.",Toast.LENGTH_SHORT).show();
+                                        Intent intent = new Intent(Activity_paylist.this, Activity_paylist.class);
+                                        startActivity(intent);
                                     }catch (MalformedURLException e){
                                         e.printStackTrace();
                                     }

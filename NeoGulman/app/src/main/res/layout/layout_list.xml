@@ -12,7 +12,27 @@
         android:layout_width="match_parent"
         android:layout_height="600dp"
         android:id="@+id/listView"
-        android:choiceMode="singleChoice"/>
+        android:choiceMode="singleChoice"
+        android:layout_above="@+id/show" />
 
+    <Button
+        android:layout_width="110dp"
+        android:layout_height="60dp"
+        android:text="뒤로가기"
+        android:id="@+id/listback"
+        android:background="@drawable/button"
+        android:layout_marginLeft="30dp"
+        android:layout_alignBottom="@+id/listView"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="110dp"
+        android:layout_height="60dp"
+        android:text="물품추가하기"
+        android:id="@+id/listadd"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/button"
+        android:layout_alignBottom="@+id/listView"
+        android:layout_alignEnd="@+id/listView" />
 
 </RelativeLayout>

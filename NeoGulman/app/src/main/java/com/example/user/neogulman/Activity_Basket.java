@@ -1,6 +1,7 @@
 package com.example.user.neogulman;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -32,7 +33,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 
-public class Activity_Basket extends AppCompatActivity {
+public class Activity_Basket extends AppCompatActivity  implements OnClickListener {
 
     String myJSON;
 
@@ -41,6 +42,8 @@ public class Activity_Basket extends AppCompatActivity {
     JSONArray peoples = null;
     ArrayList<String> listarr = new ArrayList<String>();
     ListView list;
+    Button listback2;
+    Button listwish;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +54,29 @@ public class Activity_Basket extends AppCompatActivity {
         list = (ListView) findViewById(R.id.list_basket);
         getData("http://52.79.178.97/showitem.php");
         NetworkUtil.setNetworkPolicy();
+
+        listback2 = (Button)findViewById(R.id.listback2);
+        listwish = (Button)findViewById(R.id.listwish);
+        listback2.setOnClickListener(this);
+        listwish.setOnClickListener(this);
+    }
+
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.listback2:
+                finish();
+                break;
+            case R.id.listwish:
+                Intent intent = new Intent(this, Activity_wishlist.class);
+                startActivity(intent);
+                break;
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 
     protected void showList(){
